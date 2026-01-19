@@ -169,7 +169,7 @@ function updateDisplay() {
                 card.className = "plant-card";
                 card.innerHTML = `
                     <figure>
-                        <img src="images/${id.toLowerCase()}.jpg" alt="${p.nom}" onerror="this.src='images/logo1.png'">
+                        <img src="images/${id.toLowerCase()}.jpg" alt="${p.nom}" onerror="this.src='logo1.png'">
                         <figcaption><h4>${p.nom}</h4></figcaption>
                     </figure>
                 `;
@@ -342,4 +342,5 @@ function updateDisplay() {
             modalComparateur.style.display = "none";
         });
     }
+
 });
