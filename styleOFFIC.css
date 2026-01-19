@@ -99,7 +99,7 @@ header {
 .background2 {
   width: 100%;
   height: 600px;
-  background-image: url("images/logoVertTrans.png");
+  background-image: url("logoVertTrans.png");
   background-color: #fff4d6;
   background-position: center 70%;
   /* pour garder le logo au milieu de la parite blance*/
@@ -688,3 +688,4 @@ Pied de page
   text-decoration: none;
 
 }
+
