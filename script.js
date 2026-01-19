@@ -199,7 +199,7 @@ function updateDisplay() {
     if (plantData && document.getElementById('plant-name')) {
         const img = document.getElementById('plant-img');
         if (img) {
-            img.src = `images/${plantId.toLowerCase()}.jpg`;
+            img.src = `${plantId.toLowerCase()}.jpg`;
             img.alt = plantData.nom;
         }
         document.getElementById('plant-name').textContent = "1. Nom : " + plantData.nom;
@@ -344,4 +344,5 @@ function updateDisplay() {
     }
 
 });
+
 
