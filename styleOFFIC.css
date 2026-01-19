@@ -75,7 +75,7 @@ header {
 .background {
   width: 100%;
   height: 600px;
-  background-image: url("images/fond d'écran.jpg");
+  background-image: url("fond d'écran.jpg");
   background-color: #475239;
   background-size: cover;
   background-position: center;
@@ -686,4 +686,5 @@ Pied de page
   color: #ffcc76;
   transition: 0.3s;
   text-decoration: none;
+
 }
