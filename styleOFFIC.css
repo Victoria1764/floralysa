@@ -1,0 +1,689 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+/*-----------------POUR ENLEVER LES MARGES DE BASE DE LA PAGE---------------------------*/
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FFF4D6;
+  color: #475239;
+  /*couleur de la police de base*/
+  min-height: 100vh;
+}
+
+/* -----------------------MENU PRINCIPAL------------------------------------*/
+header {
+  /* remplit tout le haut de l'écran */
+  background-color: #475239;
+  display: flex;
+  align-items: center;
+  /* met les case au centre verticalement*/
+  justify-content: flex-start;
+  margin: 0;
+  border-bottom: 2px solid #fff4d6;
+  height: auto;
+}
+
+.logo {
+  /*geres la taille du header et du logo */
+  padding: 15px 30px;
+  border-right: 2px solid #5a6f45;
+  margin: 0;
+  height: 40px;
+  width: auto;  
+}
+
+/* ALIGNEMENT MENU PRINC IMPORTANT ! */
+.main-nav {
+  flex: auto;
+  justify-content: flex-start;
+}
+
+/*alignement des onglest*/
+.nav-list {
+  list-style: none;
+  display: flex;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0;
+  gap: 5px;
+}
+
+/*Items du menu*/
+/* STYLE DE LA LISTE DE NAVIGATION DU HEADER */
+.nav-item>a {
+  display: block;
+  padding: 15px 35px;
+  color: #FFF4D6;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+/* fond des boutton quand on passe dessus*/
+.nav-item>a:hover {
+  background-color: #4a5f38;
+}
+
+/* ----------------------MENU PRINCIPAL--------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+/*------------------FOND D'ECRAN-------------------------------------------------------------------------------------------------------------------------------------------*/
+.background {
+  width: 100%;
+  height: 600px;
+  background-image: url("images/fond d'écran.jpg");
+  background-color: #475239;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  /* IMPORTANT : empile le logo puis la bande */
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  /* espace entre le logo et la bande */
+  position: relative;
+
+}
+
+
+
+/*-----FOND D'ECRAN------*/
+/* FOND D'ECRAN N°2 POUR LES PAGES AUTRE QUE LA PAGE D'ACCUEIL*/
+.background2 {
+  width: 100%;
+  height: 600px;
+  background-image: url("images/logoVertTrans.png");
+  background-color: #fff4d6;
+  background-position: center 70%;
+  /* pour garder le logo au milieu de la parite blance*/
+  background-size: 500px;
+  /*taille du logo*/
+  background-attachment: fixed;
+  /*permet de fixer le logo de fond si on scrolle*/
+  background-repeat: no-repeat;
+  /*garde un seul logo de fond */
+}
+
+/*-----LOGO SUR LE FOND DE LA PAGE D ACCUEIL---------*/
+.logo2 {
+  /*pour le gros logo du centre*/
+  width: 300px;
+  /* ajuste la taille du logo */
+  height: auto;
+}
+
+/*-----BANDE SUR LE FOND DE LA PAGE D ACCUEIL------*/
+.titreCentre {
+  color: #FFF4D6;
+  background-color: rgba(71, 82, 57, 0.7);
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  display: block;
+}
+
+
+/*=============================================================
+Second menu de navigation
+==============================================================*/
+
+.secondary-nav {
+  background-color: #A7B681;
+  padding: 10px 50px;
+  border-bottom: 1px solid #475239;
+  position: relative;
+  z-index: 10;
+}
+
+.sub-nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 40px;
+  align-items: center;
+}
+
+.sub-nav-item a {
+  text-decoration: none;
+  color: #FFF4D6;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: 1.5px solid #475239;
+  padding: 5px 15px;
+  border-radius: 4px;
+}
+
+/* ---------------------- */
+/*   CARTE DES PLANTES    */
+/* ---------------------- */
+
+.plante {
+  background-color: rgba(200, 200, 200, 0.3);
+  border: 2px solid #96563B;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 25px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.plante h3 {
+  color: #485239;
+  margin-top: 0;
+}
+
+.img-plante {
+  width: 150px;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 5px;
+  resize: vertical;
+}
+
+/* Bulle de plante en 2 colonnes */
+.plante {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+
+  background-color: #a7b58047;
+  border: 2px solid #96563b2d;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 25px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Colonne gauche : commentaire */
+.col-gauche {
+  width: 45%;
+}
+
+.col-gauche textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px;
+  resize: vertical;
+}
+
+/* Colonne droite : image + tâche */
+.col-droite {
+  width: 50%;
+  text-align: left;
+}
+
+.img-plante {
+  width: 150px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+
+/* POUR LES CASES JARDIN */
+
+.Jardin_case {
+  background-color: rgba(200, 200, 200, 0.3);
+  border: 2px solid #96563B;
+  border-radius: 10px;
+  /* cotes arrondis*/
+  padding: 20px;
+  /*taille des cases*/
+  margin-left: 30px;
+  /* espace à gauche des cases*/
+  margin-right: 30px;
+  /* espace à droite des cases*/
+  margin-top: 50px;
+  /* espace entre le header et les cases*/
+  margin-bottom: 50px;
+  /* espace entre le footer et les cases*/
+  box-shadow: 2px 2px 8px rgba(108, 123, 85, 0.1);
+  /* ombres derière les cases*/
+}
+
+.Jardin_case{
+  font-size: 30px;
+}
+
+.ListeJard {
+  list-style-type: none; /*retire les puces sur les listes des cases */
+  font-size: 25px; /*taille du texte des listes*/
+}
+
+/*=========================================
+3. CATALOGUE (PLANTES.HTML)
+========================================= */
+/* controle  l'appence de toutle les filtres, la bare de recherche*/
+/* --- MISE EN PAGE GLOBALE --- */
+
+.page-layout {
+  display: flex;
+  flex-wrap: wrap; /* Permet de passer l'un sous l'autre sur mobile (Flexible) */
+  padding: 30px;
+  gap: 40px;
+  position: relative;
+  z-index: 10;
+  align-items: flex-start;
+ 
+  margin: 0 auto;
+}
+
+/* le filtrage encadrer*/
+
+.filter-sidebar {
+  /* Modification : On utilise flex-basis pour la flexibilité au lieu d'une largeur bloquée */
+  flex: 0 1 300px; 
+  background-color: #FFF4D6;
+  padding: 20px;
+  border: 2px solid #95563C;
+  box-sizing: border-box; /* Pour que le padding ne fasse pas déborder le cadre */
+}
+
+/* les titre pour le filtrage*/
+
+.filter-title {
+  color: #475239;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+/* Les blocs pour pour chaque section du filtrage*/
+
+fieldset {
+  border: none;
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+/* Le nom des filtres*/
+
+legend {
+  font-weight: bold;
+  color: #475239;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+/* Permet d'aligner les blocs et les nom pour chaque filytrage*/
+
+.filter-sidebar label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 12px;
+  color: #A7B681;
+  margin-bottom: 4px;
+}
+
+/* --- ZONE DE RECHERCHE ET RÉSULTATS --- */
+
+/* Cette partie permet à la zone de droite de prendre tout l'espace */
+.results-area {
+  flex: 1 1 500px; /* Prend l'espace restant, minimum 500px avant de passer dessous */
+  display: flex;
+  flex-direction: column;
+  min-width: 0; /* Évite que les boites ne sortent de l'écran */
+}
+
+/* L'apparence de la barre de recherche*/
+.search-bar-container {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  background: #FFF4D6;
+  border: 2px solid #95563C; /* Ta bordure marron */
+  border-radius: 8px;
+  padding: 5px 15px;
+  margin-bottom: 30px;
+  width: 100%; /* La barre prend toute la largeur de la zone de droite */
+  box-sizing: border-box;
+}
+
+/* L'apparence des mots de la bare à l'intérieur*/
+.search-input {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background: #FFF4D6;
+}
+
+/*Permet de faire les encadrer pour toutes les plantes*/
+.plants-grid {
+  display: grid;
+  /* Modification : auto-fill permet de remplir l'écran selon sa taille */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+  width: 100%;
+}
+
+/*fais les fonds pour les encadrer pour chaque plante*/
+.plant-card {
+  background: #FFF4D6;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  border: 2px solid #FFF4D6; 
+  transition: transform 0.2s;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/*Donne une impression que les cartes sautent si on raproche la souris du l'encadré*/
+.plant-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/*Les images pour chaque plante*/
+.plant-card img {
+  width: 100%;
+  height: 200px; /* Garde une hauteur fixe pour l'harmonie de la grille */
+  object-fit: cover; /* Important : adapte l'image sans l'écraser */
+  border-radius: 5px;
+}
+
+/* --- ÉLÉMENTS SPÉCIFIQUES --- */
+
+/* Cette classe cache visuellement les titres pour ne pas encombrer la page.*/
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Uniquement pour le bouton de la barre secondaire */
+#btn-ouvrir-comparateur {
+  background-color: #a7b58047;
+  color: #475239;            
+  border: 2px solid #A7B681;
+  padding: 6px 12px;
+  font-family: 'Lora', serif;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+#btn-ouvrir-comparateur:hover {
+  background-color: #475239;
+  color: #A7B681;
+  border-color: #475239;
+}
+
+/* --- POPUP COMPARATEUR (PLANTES.HTML) --- */
+
+/* Définit l'arrière-plan sombre qui couvre toute la page quand le popup est ouvert */
+.comparateur-modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* L'encadré principal du comparateur avec le fond beige et la bordure marron */
+.comparateur-content {
+    background-color: #FFF4D6;
+    padding: 30px;
+    border: 2px solid #95563C;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 900px;
+    position: relative;
+    /* Ajout : Scroll interne si le tableau est trop grand pour l'écran */
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+/* Mise en forme du tableau de comparaison pour qu'il soit bien lisible */
+.comparateur-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Style des cellules du tableau avec les bordures marron */
+.comparateur-table th, .comparateur-table td {
+    border: 1px solid #95563C;
+    padding: 10px;
+    text-align: center;
+    color: #475239;
+    background-color: white;
+}
+
+/* Style des titres de colonnes avec le fond vert */
+.comparateur-table th {
+    background-color: #A7B681;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Apparence du bouton FERMER pour qu'il ressemble à tes autres boutons */
+.btn-fermer {
+    float: right;
+    background: #475239;
+    color: #ffcc76;
+    border: none;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 4px;
+}
+
+/* Apparence du bouton RÉINITIALISER pour vider la liste des plantes */
+.btn-reset {
+    float: left; /* Aligné à gauche à l'opposé du bouton fermer */
+    background: #95563C;
+    color: #FFF4D6;
+    border: none;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 4px;
+}
+
+/* Change la couleur du bouton réinitialiser au survol */
+.btn-reset:hover {
+    background-color: #475239;
+}
+
+/* Change la couleur du bouton fermer au survol */
+.btn-fermer:hover {
+    background-color: #95563C;
+}
+/* =========================================
+    4. PAGE DÉTAIL (PLANTE-DETAIL.HTML)
+   ========================================= */
+
+/* C'est la position des blocs dans la page et cela centre le contenu */
+.detail-page-layout {
+    display: flex;
+    flex-wrap: wrap; /* Permet aux boîtes de se ranger si on zoom ou si l'écran est petit */
+    gap: 30px;
+    padding: 30px;
+    max-width: 1300px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+
+/* C'est le bloc à gauche (Image et bouton) */
+.detail-left-column {
+    flex: 1 1 400px; /* S'étire et se réduit de façon flexible */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Bloc de droite (Description) */
+.detail-right-column {
+    flex: 1.2 1 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* L'encadré autour des blocs */
+article.detail-box {
+    background-color: #fff4d6;
+    border: 2px solid #95563C;
+    padding: 20px;
+    box-sizing: border-box; /* Pour que la bordure reste bien à l'intérieur au zoom */
+}
+
+/* Bouton comparer */
+.compare-btn {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 10px 40px;
+    background-color: #475239;
+    color: #ffcc76;
+    border: 2px solid #475239;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+/* Couleur du bouton quand on passe la souris dessus */
+.compare-btn:hover {
+    background-color: #A7B681;
+    color: #475239;
+}
+
+/* Encadré pour contenir l'image */
+.detail-image-container {
+    margin: 0;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #FFF4D6;
+    border: 2px solid #95563C;
+    width: 100%;             /* Il prend toute la largeur de sa colonne */
+    max-width: 600px;        /* Largeur à ne pas dépasser sur PC */
+    
+    /* AJOUT POUR FORCER LE RECTANGLE HORIZONTAL */
+    height: 350px;           /* Bloque la hauteur pour éviter le format vertical */
+    display: block;
+}
+
+/* Permet aux images de s'adapter dans les blocs en fonction de l'appareil ou du zoom */
+.detail-image-container img {
+    width: 100%;
+    height: 100%;            /* L'image remplit tout le cadre horizontal de 350px */
+    display: block;
+    object-fit: cover;       /* Recadre l'image sans la déformer pour remplir le rectangle */
+}
+
+/* AJOUT POUR LE MOBILE : Réduit la hauteur du rectangle sur petit écran */
+@media (max-width: 768px) {
+    .detail-image-container {
+        height: 220px;
+    }
+}
+
+/* Définit le nom de la plante */
+#plant-name {
+    margin-top: 0;
+    color: #475239;
+    font-size: 1.8rem;
+}
+
+/* Définit le nom de chaque catégorie de chaque bloc */
+.detail-box h2 {
+    color: #475239;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+/* Définit le titre principal de la description */
+.description-main-title {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #475239;
+    margin-bottom: 25px;
+}
+
+/* Listes de données épurées */
+/* Permet l'alignement correct en colonnes entre les noms des sous-catégories et leurs valeurs */
+dl {
+    display: grid;
+    grid-template-columns: minmax(150px, auto) 1fr;
+    gap: 8px;
+    margin: 0 0 20px 15px;
+}
+
+/* La mise en forme des catégories dans chaque bloc */
+dt {
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #475239;
+}
+
+/* La mise en forme des valeurs de chaque sous-catégorie */
+dd {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #475239;
+}
+/*-----------------------------------------------------------------------------------------------------
+Pied de page
+-------------------------------------------------------------------------------------------------------*/
+.footer {
+  background-color: #475239;
+  color: #ffcc76;
+  padding: 10px;
+  text-align: center;
+}
+
+.footer-text {
+  color: #ffcc76;
+  justify-content: center;
+}
+
+.footer-buttons {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  gap: 20px;
+}
+
+.footer-btn {
+  color: #ffcc76;
+  transition: 0.3s;
+  text-decoration: none;
+}

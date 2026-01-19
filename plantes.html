@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Liste des plantes</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="styleOFFIC.css">
+</head>
+
+<body class="background2">
+	<header>
+		<a href="pageaccueilTEST.html">
+			<img src="images/logo1.png" alt="Logo Floralysa" class="logo">
+		</a>
+		<nav class="main-nav" aria-label="Navigation principale">
+			<ul class="nav-list">
+				<li class="nav-item"><a href="pagejardin.html">JARDIN</a></li>
+				<li class="nav-item"><a href="compte.html">COMPTE</a></li>
+				<li class="nav-item"><a href="taches.html">TACHES</a></li>
+				<li class="nav-item"><a href="plantes.html">PLANTES</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<nav class="secondary-nav">
+		<ul class="sub-nav-list">
+			<li class="sub-nav-item"><a href="plantes.html">PLANTES</a></li>
+			<li class="sub-nav-item"><button id="btn-ouvrir-comparateur" type="button">COMPARER PLANTES</button></li>
+		</ul>
+	</nav>
+
+	<main class="page-layout">
+		<aside class="filter-sidebar">
+			<h2 class="filter-title">FILTRES</h2>
+			<form id="filter-form">
+				<fieldset>
+					<legend>1. Exposition à la lumière </legend>
+					<label><input type="checkbox" name="expo" value="soleil"> Plein soleil</label>
+					<label><input type="checkbox" name="expo" value="mi-ombre"> Mi-ombre</label>
+					<label><input type="checkbox" name="expo" value="ombre"> Ombre</label>
+				</fieldset>
+
+				<fieldset>
+					<legend>2. Type de sol</legend>
+					<label><input type="checkbox" name="sol" value="drainé"> Drainé</label>
+					<label><input type="checkbox" name="sol" value="sableux"> Sableux</label>
+					<label><input type="checkbox" name="sol" value="calcaire"> Calcaire</label>
+					<label><input type="checkbox" name="sol" value="humifère"> Humifère</label>
+					<label><input type="checkbox" name="sol" value="neutre"> Neutre</label>
+					<label><input type="checkbox" name="sol" value="argileux"> Argileux</label>
+					<label><input type="checkbox" name="sol" value="acide"> Acide</label>
+				</fieldset>
+
+				<fieldset>
+					<legend>3. Besoins en eau</legend>
+					<label><input type="checkbox" name="eau" value="faible"> Faible</label>
+					<label><input type="checkbox" name="eau" value="modéré"> Modéré</label>
+					<label><input type="checkbox" name="eau" value="élevé"> Élevé</label>
+				</fieldset>
+
+				<fieldset>
+					<legend>4. Taille de la plante</legend>
+					<label><input type="checkbox" name="taille" value="petite"> Petite (moins de 30 cm)e</label>
+					<label><input type="checkbox" name="taille" value="moyenne"> Moyenne (30 à 1 m)</label>
+					<label><input type="checkbox" name="taille" value="grande"> Grande (plus de 1 m)</label>
+				</fieldset>
+
+				<fieldset>
+					<legend>5.Niveau d'entretien souhaité</legend>
+					<label><input type="checkbox" name="entretien" value="faible"> Faible</label>
+					<label><input type="checkbox" name="entretien" value="modéré"> Modéré</label>
+					<label><input type="checkbox" name="entretien" value="élevé"> Elevé</label>
+				</fieldset>
+			</form>
+		</aside>
+
+		<section class="results-area">
+			<h2 class="visually-hidden">Résultats de recherche</h2>
+			<header class="search-bar-container">
+				<input type="text" class="search-input" placeholder="Rechercher une plante...">
+			</header>
+
+			<section id="plants-grid" class="plants-grid">
+				<h3 class="visually-hidden">Liste des plantes</h3>
+			</section>
+		</section>
+	</main>
+
+	<footer class="footer">
+		<p class="footer-text">© 2025 Floralysa. Tous droits réservés.</p>
+		<div class="footer-buttons">
+			<a href="rejoindre.html" class="footer-btn">Nous rejoindre</a>
+			<a href="mentions.html" class="footer-btn">Mentions légales</a>
+		</div>
+	</footer>
+
+	<script src="script.js"></script>
+	<aside id="modal-comparateur" class="comparateur-modal" style="display:none;">
+		<article class="comparateur-content">
+			<header>
+				<button type="button" id="fermer-comparateur" class="btn-fermer">FERMER</button>
+				<button type="button" id="reset-comparateur" class="btn-reset">RÉINITIALISER</button>
+				<h2 class="description-main-title">COMPARAISON DES PLANTES</h2>
+			</header>
+			<table id="tableau-comparaison" class="comparateur-table">
+			</table>
+		</article>
+	</aside>
+</body>
+
+</html>
